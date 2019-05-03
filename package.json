@@ -1,7 +1,7 @@
 {
-  "name": "copenhagen_theme",
+  "name": "CopenhagenVoom",
   "version": "1.0.0",
-  "repository": "git@github.com:zendesk/copenhagen_theme.git",
+  "repository": "git@github.com:voomflights/voom-zendesk-guide-theme.git",
   "dependencies": {
     "node-fetch": "^2.1.2"
   },
