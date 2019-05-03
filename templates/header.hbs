@@ -1,15 +1,14 @@
 <header class="header">
   <div class="logo">
-    {{#link href="https://www.voom.flights"}}
+    <a href="https://www.voom.flights">
       <img src="{{settings.logo}}">
-    {{/link}}
+    </a>
   </div>
   <div class="nav-wrapper">
     <span class="icon-menu" tabindex="0" role="button" aria-controls="user-nav" aria-expanded="false" aria-label="{{t 'toggle_navigation'}}"></span>
     <nav class="user-nav" id="user-nav">
       {{link 'help_center'}}
-      {{link "Where we Fly" href="https://www.voom.flights"}}
-      {{link 'community'}}
+      {{!-- {{link 'community'}} --}}
       {{link 'new_request' class='submit-a-request'}}
     </nav>
     {{user_info}}
