@@ -5,9 +5,14 @@
 </section>
 
 <div class="container">
-   <section>
-	  <table style="width:100%;text-align:center;">
+  <section>
+    <table style="width:100%;text-align:center;">
       <tr>
+        <td>
+          <strong>San Francisco</strong><br />
+          ☎️ <a class="voom-help__link">+1 ‭(415) 968-1665‬</a><br />
+          ✉️ <a href="mailto:support-us@voom.flights" target="_self">support-us@voom.flights</a>
+        </td>
         <td>
           <strong>São Paulo</strong><br />
           ☎️ <a class="voom-help__link">+55 (11) 4280-5344</a><br />
@@ -27,53 +32,53 @@
     <section class="categories blocks">
       <ul class="blocks-list">
         {{#each categories}}
-          {{#if ../has_multiple_categories}}
-            <li class="blocks-item">
-              <a href='{{url}}' class="blocks-item-link">
-                <h4 class="blocks-item-title">{{name}}</h4>
-                <p class="blocks-item-description">{{excerpt description}}</p>
-              </a>
-            </li>
-          {{else}}
-            {{#each sections}}
-              <li class="blocks-item">
-                <a href='{{url}}' class="blocks-item-link">
-                  <h4 class="blocks-item-title">
-                    {{name}}
-                  </h4>
-                  <p class="blocks-item-description">{{excerpt description}}</p>
-                </a>
-              </li>
-            {{/each}}
-          {{/if}}
+        {{#if ../has_multiple_categories}}
+        <li class="blocks-item">
+          <a href='{{url}}' class="blocks-item-link">
+            <h4 class="blocks-item-title">{{name}}</h4>
+            <p class="blocks-item-description">{{excerpt description}}</p>
+          </a>
+        </li>
+        {{else}}
+        {{#each sections}}
+        <li class="blocks-item">
+          <a href='{{url}}' class="blocks-item-link">
+            <h4 class="blocks-item-title">
+              {{name}}
+            </h4>
+            <p class="blocks-item-description">{{excerpt description}}</p>
+          </a>
+        </li>
+        {{/each}}
+        {{/if}}
         {{/each}}
       </ul>
       {{pagination}}
     </section>
 
     {{#if promoted_articles}}
-      <section class="articles">
-        <h3>{{t 'promoted_articles'}}</h3>
-        <ul class="article-list promoted-articles">
-          {{#each promoted_articles}}
-            <li class="promoted-articles-item">
-                <a href="{{url}}">
-                  {{title}}
+    <section class="articles">
+      <h3>{{t 'promoted_articles'}}</h3>
+      <ul class="article-list promoted-articles">
+        {{#each promoted_articles}}
+        <li class="promoted-articles-item">
+          <a href="{{url}}">
+            {{title}}
 
-                  {{#if internal}}
-                    <span class="icon-lock" title="{{t 'internal'}}"></span>
-                  {{/if}}
-                </a>
-            </li>
-          {{/each}}
-        </ul>
-      </section>
+            {{#if internal}}
+            <span class="icon-lock" title="{{t 'internal'}}"></span>
+            {{/if}}
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+    </section>
     {{/if}}
   </section>
 
   <section class="section activity">
     {{#if settings.show_recent_activity}}
-      {{recent_activity}}
+    {{recent_activity}}
     {{/if}}
   </section>
 </div>
